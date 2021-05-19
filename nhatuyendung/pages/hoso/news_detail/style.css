@@ -1,0 +1,81 @@
+*{
+    box-sizing: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background-color: rgb(235, 232, 232);
+    padding: 30px 0;
+}
+
+.container{
+    max-width: 1100px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.news_info{
+    display: flex;
+    padding: 20px 30px;
+}
+
+.news_info img{
+    width: 25%;
+    margin-right: 100px;
+    object-fit: contain;
+}
+
+/* news_detail */
+.news_detail{
+    padding: 20px 30px;
+}
+
+/* /ungvien */
+
+.ungvien_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;                 
+}
+
+.ungvien_container a{
+    text-decoration: none;
+    color: #333;
+}
+
+.ungvien_wrap{                       
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 0 10px 10px 0;
+    width: 508px;
+}
+
+.ungvien_wrap:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.ungvien_wrap img{
+    margin: 10px 60px 6px 20px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.ungvien_text h3{
+    margin-top: 10px;
+}
+
+.ungvien_text p{
+    margin: 0;
+}
+
+.text{
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+}

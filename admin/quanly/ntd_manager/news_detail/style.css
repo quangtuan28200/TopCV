@@ -1,0 +1,58 @@
+*{
+    box-sizing: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background-color: rgb(235, 232, 232);
+    padding: 30px 0;
+}
+
+.container{
+    max-width: 1100px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.news_info{
+    display: flex;
+    padding: 20px 30px;
+}
+
+.news_info img{
+    width: 25%;
+    margin-right: 100px;
+    object-fit: contain;
+}
+
+/* news_detail */
+.news_detail{
+    padding: 20px 30px;
+}
+
+.ungtuyen{
+    text-align: center;
+}
+
+.ungtuyen_btn{
+    background-color: #00b14f;
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    outline: none;
+}
+
+.ungtuyen_btn:hover{
+    background-color: #32bb70;
+    cursor: pointer;
+}
+

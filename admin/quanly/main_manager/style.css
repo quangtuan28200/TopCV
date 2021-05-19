@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: white;
+}
+
+.header_container{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header_container a{
+    text-decoration: none;
+    color: black;
+}
+
+.header_icon{
+    margin: 0 0 0 6px;
+    font-size: 10px;
+}
+
+.header_icon i {
+    line-height: 66.81px;
+}
+
+.dangxuat{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 124px;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.dangxuat h3{
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.dangxuat:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.text{
+    margin-left: 20px;
+}
+
+.text:hover {
+    color: rgb(4, 165, 31);
+}
+
+.header_container:hover h3{
+    cursor: pointer;
+}
+
+.header_nav{
+    display: flex;
+}
+
+.acc{
+    display: flex;
+    position: relative;
+}
+
+.acc:hover .dangxuat{
+    display: block;
+}
+
+
+.content{
+    background-image: url("../../../images/admin_background.jpg");
+    height: 550px;
+    background-size: 72%;
+}
+
+.footer{
+    border-top: 1px solid #ccc;
+    background-color: rgb(230, 227, 227);
+    height: 150px;
+}
+
+.footer p{
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
