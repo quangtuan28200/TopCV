@@ -24,14 +24,14 @@
 		$prize = $_POST['prize'];
 		$skill = $_POST['skill'];
 		$hobbit = $_POST['hobbit'];   
+
         
         //Xu ly hinhanh
         $avatar = $_FILES['img']['name'];
         $avatar_tmp= $_FILES['img']['tmp_name'];
-
+        
         //Hàm time() sẽ trả về số giây tính từ thời điểm 00:00:00 1/1/1970 đến thời điểm hiện tại.
         $avatar = time().'_'.$avatar;
-		
 
         $sql = "INSERT into cv(userid, img, address, date, gendar, email, phone, edu, exp, acti, chungchi, prize, skill, hobbit, name) 
                             value ('".$userid."', '".$avatar."', '".$add."',
@@ -40,15 +40,23 @@
                                     '".$acti."', '".$chungchi."', '".$prize."',
                                     '".$skill."', '".$hobbit."', '".$name."')";
         $query = mysqli_query($mysqli, $sql);
+        if(!$query)
+        {
+            echo mysqli_error($mysqli);
+            die();
+        }
+        else
+        {
+            //Chuyen hinh anh luu vao foder uploads
+            move_uploaded_file($avatar_tmp, 'pages/CV/avatar/'.$avatar);
+    
+            //Cac bien mess
+            $mess = 'Tạo CV thành công';
+            $status = 'signup-success';
+            $hide = 'hide';
+            $showCV = '';
+        } 
 
-        //Chuyen hinh anh luu vao foder uploads
-        move_uploaded_file($avatar_tmp, 'pages/CV/avatar/'.$avatar);
-
-        //Cac bien mess
-        $mess = 'Tạo CV thành công';
-        $status = 'signup-success';
-        $hide = 'hide';
-        $showCV = '';
     }
 ?>
 

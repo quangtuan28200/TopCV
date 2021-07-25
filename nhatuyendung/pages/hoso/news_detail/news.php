@@ -1,8 +1,13 @@
 <?php
     include("../config/config.php");
-    $sql = "SELECT * from news n, company c where n.ntdid = c.ntdid and id = $_GET[newsid]";
+    $sql = "SELECT * from news n, company c where n.ntdid = c.ntdid and n.id = $_GET[newsid]";
     $query = mysqli_query($mysqli, $sql);
-    
+    if(!$query)
+    {
+        echo mysqli_error($mysqli);
+        die();
+    }
+    else{
     while($row = mysqli_fetch_array($query)){    
 ?>
 
@@ -78,5 +83,6 @@
         </div>
 
 <?php
+    }
     }
 ?>

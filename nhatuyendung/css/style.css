@@ -62,6 +62,7 @@ body{
     margin: 0;
     line-height: 69px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .header__acc i{
@@ -132,6 +133,8 @@ body{
 
 .filter__banner{
     background-color: white;
+    height: calc(100vh - 69px);
+    display: flex;
 }
 
 .banner__Wrap{
@@ -139,7 +142,6 @@ body{
     width: 1100px;
     margin: auto;
     justify-content: space-between;
-    padding-bottom: 20px;
 }
 
 .banner__text h1{

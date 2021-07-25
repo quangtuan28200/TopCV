@@ -43,8 +43,14 @@
                 <h3>TIN ĐÃ ỨNG TUYỂN</h3>
                 <?php
                     //lay data news
-                    $sql = "SELECT id, title, date, salary, address from news, ungtuyen where ntdid = $_GET[ntdid] and status = 1 and id = newsid and userid = $_SESSION[userid]";
+                    $sql = "SELECT news.id, title, date, salary, address from news, ungtuyen where ntdid = $_GET[ntdid] and status = 1 and news.id = newsid and userid = $_SESSION[userid]";
                     $query = mysqli_query($mysqli, $sql);
+                    if(!$query)
+                    {
+                        echo mysqli_error($mysqli);
+                        die();
+                    }
+                    else{
                     while($row = mysqli_fetch_array($query)){
                 ?>
                         <div class="news_wrap">
@@ -60,6 +66,7 @@
                         </div>
                 <?php
                     }
+                    }
                 ?>
             </div>
             <!-- da dang -->
@@ -69,8 +76,14 @@
                     //lay data news
                     $sql = "SELECT id, title, date, salary, address from news where ntdid = $_GET[ntdid] and status = 1
                             EXCEPT
-                            SELECT id, title, date, salary, address from news, ungtuyen where ntdid = $_GET[ntdid] and status = 1 and id = newsid and userid = $_SESSION[userid]";
+                            SELECT news.id, title, date, salary, address from news, ungtuyen where ntdid = $_GET[ntdid] and status = 1 and news.id = newsid and userid = $_SESSION[userid]";
                     $query = mysqli_query($mysqli, $sql);
+                    if(!$query)
+                    {
+                        echo mysqli_error($mysqli);
+                        die();
+                    }
+                    else{
                     while($row = mysqli_fetch_array($query)){
                 ?>
                         <div class="news_wrap">
@@ -85,6 +98,7 @@
                             
                         </div>
                 <?php
+                    }
                     }
                 ?>
             </div>

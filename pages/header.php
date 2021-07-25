@@ -15,13 +15,18 @@
         //Kiem tra xem user da tao CV hay chua
         $sql = "SELECT * from cv where userid = '".$userid."'";
         $query = mysqli_query($mysqli, $sql);
-    
+        if(!$query)
+        {
+            echo mysqli_error($mysqli);
+            die();
+        }
+        else{
         while($row = mysqli_fetch_array($query)){
             if($row['userid'] == $userid){
                 $CV_GET = '?suacv';
                 $CV_created = 'Sửa CV';
             }
-        }
+        }}
     }else{
         $mess = '';
     }
